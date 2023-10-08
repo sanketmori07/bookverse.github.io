@@ -1,0 +1,366 @@
+body{
+    background-image: url(image/5.jpg);
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    height: 80px;
+    width: 100%;
+}
+label.logo{ 
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 100px;
+    font-weight: bold;
+}
+nav ul{
+    float:right ;
+    margin-right: 20px;   
+}
+nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin-top: 10px;
+    margin-right: 60px;
+    color: white;
+}
+.nav ul i{
+  margin-right: 70px;
+}
+.logo{
+    font-size: 2em;
+    user-select: none;
+}
+.navigation a{
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 50px;
+}
+.navigation i{
+  margin-right: 70px;
+  color: #fff;
+}
+.navigation a::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: middile;
+    transform: scaleX(0);
+    transition: transform .4s;
+}
+.navigation a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left;
+
+}
+
+/* catogary */
+.main {
+    height: 100%;
+    margin-top: 60px;
+    padding: 10px 50px;
+}
+#sidebarMenu {
+    height: 100%;
+  position: absolute;
+  right: 10px;
+    top: 60px;
+    width: 250px;
+    margin-top: 60px;
+    transform: translateX(250px);
+    transition: transform 250ms ease-in-out;
+    background: rgb(66, 63, 63);
+}
+.menu{
+  list-style: none; 
+    margin:0;
+    padding:0;
+}
+.menu li{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+.menu li a{
+    color: #fff;
+    display: block;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+}
+#openSidebarMenu:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input#openSidebarMenu{
+    display: none;
+}
+.sidebarIconToggle {
+  height: 25px;
+    width: 25px;
+    position: absolute;
+    z-index: 99;
+    top: 70px;
+    right: 15px;
+    transition: all 0.3s;
+    cursor: pointer; 
+}
+.spinner {
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+.spinner.middle ,
+.spinner.bottom{
+    margin-top: 3px;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.middle {
+    opacity: 0;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.top {
+    transform: rotate(135deg);
+    margin-top: 8px;
+}
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.bottom {
+    transform: rotate(-135deg);
+    margin-top: -9px;
+}
+::-webkit-scrollbar-button{
+    background: #fff;
+}
+/* title of img */
+.hrline
+{
+    top: -350px;
+    background-color: rgb(70, 65, 65);
+    width: 1335px;
+    height: 50px;
+    position: relative;
+    z-index: 10;
+    border-radius: 10px;
+}
+.hrline span{
+  color: red;
+  margin-top: 0px;
+  margin-left: 500px;
+  font-size: 35px;
+}
+/* tablebox of reviews */
+.tableofreview{
+  background-color: rgb(59, 56, 56);
+  margin-top: -310px;
+  margin-left: 500px;
+  width: 40%;
+  height: 400px;
+  border-radius: 5px;
+}
+.starofreviews{
+  background: rgb(58, 57, 57);
+  width: 250px;
+  height: 50px;
+  margin-left: 105px;
+  border-radius: 5px;
+}
+.starofreviews i{
+  margin-top: 30px;
+  margin-left: 5px;
+  font-size: 40px;
+  color: gold;
+}
+.starofreviews img{
+  height: 40px;
+  width: 200px;
+  margin-top: 5px;
+  margin-left: 25px;
+  border-radius: 10px;
+}
+.genresofreviews{
+  background-color: white;
+  width: 100px;
+  height: 50px;
+  margin-top: 40px;
+  margin-left: 40px;
+  border-radius: 10px;
+}
+.genresofreviews p{
+    margin-top: 60px;
+    margin-left: 22px;
+    font-size: 20px;
+    position: relative;
+    top: 25%;
+}
+.genresofreviews2{
+  background: black;
+  height: 50px;
+  width: 200px;
+  margin-left: 160px;
+  margin-top: -50px;
+  border-radius: 10px;
+}
+.writerofreviews{
+  background-color: white;
+  width: 100px;
+  height: 50px;
+  margin-top: 40px;
+  margin-left: 40px;
+  border-radius: 10px;
+}
+.genresofreviews2 span{
+  color: red;
+  font-size: 20px;
+  position: relative;
+  top: 25%;
+  left: 30px; 
+}
+.writerofreviews span{
+  color: black;
+  font-size: 20px;
+  position: relative;
+  top: 25%;
+  left: 15px; 
+}
+.writerofreviews2{
+  background: black;
+  height: 50px;
+  width: 200px;
+  margin-left: 160px;
+  margin-top: -50px;
+  border-radius: 10px;
+}
+.writerofreviews2 span{
+  color: red;
+  font-size: 15px;
+  position: relative;
+  top: 25%;
+  left: 30px; 
+}
+.readbook {
+  background-color: white;
+  width: 140px;
+  height: 40px;
+  margin-top: 40px;
+  margin-left: 40px;
+  position: relative;
+}
+.readbook span{
+  color: black;
+  font-size: 20px;
+  position: relative;
+  top: 20%;
+  left: 43px; 
+}
+.downloadbook{
+  background-color: white;
+  width: 160px;
+  height: 40px;
+  margin-top: -40px;
+  margin-left: 200px;
+  position: relative;
+}
+.downloadbook span{
+  color: black;
+  font-size: 20px;
+  position: relative;
+  top: 20%;
+  left: 35px; 
+}
+/* image of review */
+.imageofreviews{
+  height: 255px;
+  width: 171px;
+  margin-top: 120px;
+  margin-left: 60px;
+}
+/* summary */
+.summarybox{
+  background-color: rgb(48, 47, 47);
+  width: 920px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: 20px;
+  border-radius: 9px;
+  color: #fff;
+}
+.summarybox i{
+  margin-top: 15px;
+  margin-left: 25px;
+}
+.summarybox span{
+  margin-left: 20px;
+  top: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+.summarybox pre{
+  color: #fff;
+  font-size: 20px;
+  margin-top: 20px;
+}
+.commentbox{
+  background-color: rgb(48, 47, 47);
+  width: 920px;
+  height: 50px;
+  margin-top: 200px;
+  margin-left: 20px;
+  border-radius: 9px;
+  color: #fff;
+}
+.commentbox i{
+  margin-top: 15px;
+  margin-left: 25px;
+}
+.commentbox span{
+  margin-left: 20px;
+  top: 20px;
+  font-size: 20px;
+  color: #fff;
+}
+.comment input{
+  margin-top: 10px;
+  height: 120px;
+  width: 400px;
+  margin-left: 40px;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+}
+.comment p{
+  margin-top: 80px;
+  margin-left: -10px;
+  color: #fff;
+  text-align: center;
+}
+.postboxofreviews{
+  border: 2px solid white;
+  height: 20px;
+  width: 70px;
+  background: white;
+  margin-left: 350px;
+  margin-top: 10px;
+}
+.postboxofreviews span{
+  margin-top: 5px;
+  margin-left: 17px
+}
+
+/* -----scroll bar-----*/
+::-webkit-scrollbar{
+width: 15px;
+}
+::-webkit-scrollbar-track{
+background: #d1e5ff;
+}
+:-webkit-scrollbar-thumb{
+background: linear-gradient(#642bff, #ff22e6);
+border-radius: 10px;
+}

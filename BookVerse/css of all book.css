@@ -1,0 +1,429 @@
+body {
+    background-image: url(image/5.jpg);
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    height: 5rem; /* 80px converted to rem */
+    width: 100%;
+}
+
+label.logo {
+    color: white;
+    font-size: 2.1875rem; /* 35px converted to rem */
+    line-height: 5rem; /* 80px converted to rem */
+    padding: 0 6.25rem; /* 100px converted to rem */
+    font-weight: bold;
+}
+
+nav ul {
+    float: right;
+    margin-right: 1.25rem; /* 20px converted to rem */
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 5rem; /* 80px converted to rem */
+    margin-top: 0.625rem; /* 10px converted to rem */
+    margin-right: 3.75rem; /* 60px converted to rem */
+    color: white;
+}
+
+.nav ul i {
+    margin-right: 4.375rem; /* 70px converted to rem */
+}
+
+.logo {
+    font-size: 2rem; /* 32px converted to rem */
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 3.125rem; /* 50px converted to rem */
+}
+
+.navigation i {
+    margin-right: 4.375rem; /* 70px converted to rem */
+    color: #fff;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -0.375rem; /* 6px converted to rem */
+    width: 100%;
+    height: 0.1875rem; /* 3px converted to rem */
+    background: #fff;
+    border-radius: 0.3125rem; /* 5px converted to rem */
+    transform-origin: middle;
+    transform: scaleX(0);
+    transition: transform 0.4s;
+}
+
+.navigation a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+/* category */
+.main {
+    height: 100%;
+    margin-top: 3.75rem; /* 60px converted to rem */
+    padding: 0.625rem 3.125rem; /* 10px 50px converted to rem */
+}
+
+#sidebarMenu {
+    height: 100%;
+    position: absolute;
+    right: 0.625rem; /* 10px converted to rem */
+    top: 3.75rem; /* 60px converted to rem */
+    width: 15.625rem; /* 250px converted to rem */
+    margin-top: 3.75rem; /* 60px converted to rem */
+    transform: translateX(15.625rem); /* 250px converted to rem */
+    transition: transform 250ms ease-in-out;
+    background: transparent;
+}
+
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 3rem; /* 48px converted to rem */
+}
+
+.menu li {
+    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.10); /* 1px converted to rem */
+}
+
+.menu li a {
+    color: #fff;
+    display: block;
+    padding: 1.25rem; /* 20px converted to rem */
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: black;
+}
+
+#openSidebarMenu:checked ~ #sidebarMenu {
+    transform: translateX(0);
+}
+
+input#openSidebarMenu {
+    display: none;
+}
+
+.sidebarIconToggle {
+    height: 1.5625rem; /* 25px converted to rem */
+    width: 1.5625rem; /* 25px converted to rem */
+    position: absolute;
+    z-index: 99;
+    top: 4.375rem; /* 70px converted to rem */
+    right: 0.9375rem; /* 15px converted to rem */
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.spinner {
+    height: 0.1875rem; /* 3px converted to rem */
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+.spinner.middle,
+.spinner.bottom {
+    margin-top: 0.1875rem; /* 3px converted to rem */
+}
+
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.middle {
+    opacity: 0;
+}
+
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.top {
+    transform: rotate(135deg);
+    margin-top: 0.5rem; /* 8px converted to rem */
+}
+
+#openSidebarMenu:checked ~ .sidebarIconToggle > .spinner.bottom {
+    transform: rotate(-135deg);
+    margin-top: -0.5625rem; /* -9px converted to rem */
+}
+
+::-webkit-scrollbar-button {
+    background: #fff;
+}
+
+/* title of img */
+.hrline {
+    top: -21.875rem; /* -350px converted to rem */
+    background-color: rgb(70, 65, 65);
+    width: 83.4375rem; /* 1335px converted to rem */
+    height: 3.125rem; /* 50px converted to rem */
+    position: relative;
+    border-radius: 0.625rem; /* 10px converted to rem */
+}
+
+.hrline span {
+    color: red;
+    margin-top: 0;
+    margin-left: 31.25rem; /* 500px converted to rem */
+    font-size: 2.1875rem; /* 35px converted to rem */
+}
+
+/* Assuming a base font size of 16px */
+
+/* tablebox of reviews */
+.tableofreview {
+    background-color: rgb(59, 56, 56);
+    margin-top: -19.375rem; /* -310px / 16px = -19.375rem */
+    margin-left: 31.25rem; /* 500px / 16px = 31.25rem */
+    width: 40%; /* No conversion needed for percentages */
+    height: 25rem; /* 400px / 16px = 25rem */
+    border-radius: 0.3125rem; /* 5px / 16px = 0.3125rem */
+  }
+  
+  /* starofreviews */
+  .starofreviews {
+    background: rgb(58, 57, 57);
+    width: 15.625rem; /* 250px / 16px = 15.625rem */
+    height: 3.125rem; /* 50px / 16px = 3.125rem */
+    margin-left: 6.5625rem; /* 105px / 16px = 6.5625rem */
+    border-radius: 0.3125rem; /* 5px / 16px = 0.3125rem */
+  }
+  
+  .starofreviews i {
+    margin-top: 1.875rem; /* 30px / 16px = 1.875rem */
+    margin-left: 0.3125rem; /* 5px / 16px = 0.3125rem */
+    font-size: 2.25rem; /* 36px / 16px = 2.25rem */
+    color: gold;
+  }
+  
+  .starofreviews img {
+    height: 2.5rem; /* 40px / 16px = 2.5rem */
+    width: 12.5rem; /* 200px / 16px = 12.5rem */
+    margin-top: 0.3125rem; /* 5px / 16px = 0.3125rem */
+    margin-left: 1.5625rem; /* 25px / 16px = 1.5625rem */
+    border-radius: 0.625rem; /* 10px / 16px = 0.625rem */
+  }
+  
+  /* genresofreviews */
+  .genresofreviews {
+    background-color: white;
+    width: 6.25rem; /* 100px / 16px = 6.25rem */
+    height: 3.125rem; /* 50px / 16px = 3.125rem */
+    margin-top: 2.5rem; /* 40px / 16px = 2.5rem */
+    margin-left: 2.5rem; /* 40px / 16px = 2.5rem */
+    border-radius: 0.625rem; /* 10px / 16px = 0.625rem */
+  }
+  
+  .genresofreviews p {
+    margin-top: 3.75rem; /* 60px / 16px = 3.75rem */
+    margin-left: 1.375rem; /* 22px / 16px = 1.375rem */
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
+    position: relative;
+    top: 1.5625rem; /* 25px / 16px = 1.5625rem */
+  }
+  
+  /* genresofreviews2 */
+  .genresofreviews2 {
+    background: black;
+    height: 3.125rem; /* 50px / 16px = 3.125rem */
+    width: 12.5rem; /* 200px / 16px = 12.5rem */
+    margin-left: 10rem; /* 160px / 16px = 10rem */
+    margin-top: -3.125rem; /* -50px / 16px = -3.125rem */
+    border-radius: 0.625rem; /* 10px / 16px = 0.625rem */
+  }
+  
+  /* writerofreviews */
+  .writerofreviews {
+    background-color: white;
+    width: 6.25rem; /* 100px / 16px = 6.25rem */
+    height: 3.125rem; /* 50px / 16px = 3.125rem */
+    margin-top: 2.5rem; /* 40px / 16px = 2.5rem */
+    margin-left: 2.5rem; /* 40px / 16px = 2.5rem */
+    border-radius: 0.625rem; /* 10px / 16px = 0.625rem */
+  }
+  
+  .genresofreviews2 span {
+    color: red;
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
+    position: relative;
+    top: 1.5625rem; /* 25px / 16px = 1.5625rem */
+    left: 1.875rem; /* 30px / 16px = 1.875rem */
+  }
+  
+  .writerofreviews span {
+    color: black;
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
+    position: relative;
+    top: 1.5625rem; /* 25px / 16px = 1.5625rem */
+    left: 0.9375rem; /* 15px / 16px = 0.9375rem */
+  }
+  
+  /* writerofreviews2 */
+  .writerofreviews2 {
+    background: black;
+    height: 3.125rem; /* 50px / 16px = 3.125rem */
+    width: 12.5rem; /* 200px / 16px = 12.5rem */
+    margin-left: 10rem; /* 160px / 16px = 10rem */
+    margin-top: -3.125rem; /* -50px / 16px = -3.125rem */
+    border-radius: 0.625rem; /* 10px / 16px = 0.625rem */
+  }
+  
+  .writerofreviews2 span {
+    color: red;
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
+    position: relative;
+    top: 1.5625rem; /* 25px / 16px = 1.5625rem */
+    left: 3.125rem; /* 50px / 16px = 3.125
+  /* Assuming a base font size of 16px */
+
+/* readbook */
+.readbook {
+    background-color: white;
+    width: 8.75rem; /* 140px / 16px = 8.75rem */
+    height: 2.5rem; /* 40px / 16px = 2.5rem */
+    margin-top: 2.5rem; /* 40px / 16px = 2.5rem */
+    margin-left: 2.5rem; /* 40px / 16px = 2.5rem */
+    position: relative;
+  }
+  
+  .readbook span {
+    color: black;
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
+    position: relative;
+    top: 12.5%; /* 20px / 16px = 1.25rem */
+    left: 2.6875rem; /* 43px / 16px = 2.6875rem */
+  }
+  
+  /* downloadbook */
+  .downloadbook {
+    background-color: white;
+    width: 10rem; /* 160px / 16px = 10rem */
+    height: 2.5rem; /* 40px / 16px = 2.5rem */
+    margin-top: -2.5rem; /* -40px / 16px = -2.5rem */
+    margin-left: 12.5rem; /* 200px / 16px = 12.5rem */
+    position: relative;
+  }
+  
+  .downloadbook span {
+    color: black;
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
+    position: relative;
+    top: 12.5%; /* 20px / 16px = 1.25rem */
+    left: 1.875rem; /* 30px / 16px = 1.875rem */
+  }
+  
+  /* image of review */
+  .imageofreviews {
+    height: 15.9375rem; /* 255px / 16px = 15.9375rem */
+    width: 10.6875rem; /* 171px / 16px = 10.6875rem */
+    margin-top: 7.5rem; /* 120px / 16px = 7.5rem */
+    margin-left: 3.75rem; /* 60px / 16px = 3.75rem */
+  }
+  
+  /* summary */
+  .summarybox {
+    background-color: rgb(48, 47, 47);
+    width: 57.5rem; /* 920px / 16px = 57.5rem */
+    height: 3.125rem; /* 50px / 16px = 3.125rem */
+    margin-top: 1.25rem; /* 20px / 16px = 1.25rem */
+    margin-left: 1.25rem; /* 20px / 16px = 1.25rem */
+    border-radius: 0.5625rem; /* 9px / 16px = 0.5625rem */
+    color: #fff;
+  }
+  
+  .summarybox i {
+    margin-top: 0.9375rem; /* 15px / 16px = 0.9375rem */
+    margin-left: 1.5625rem; /* 25px / 16px = 1.5625rem */
+  }
+  
+  .summarybox span {
+    margin-left: 1.25rem; /* 20px / 16px = 1.25rem */
+    top: 1.25rem; /* 20px / 16px = 1.25rem */
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
+    color: #fff;
+  }
+  
+  .summarybox pre {
+    color: #fff;
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
+    margin-top: 1.25rem; /* 20px / 16px = 1.25rem */
+  }
+  
+  /* commentbox */
+  .commentbox {
+    background-color: rgb(48, 47, 47);
+    width: 57.5rem; /* 920px / 16px = 57.5rem */
+    height: 3.125rem; /* 50px / 16px = 3.125rem */
+    margin-top: 12.5rem; /* 200px / 16px = 12.5rem */
+    margin-left: 1.25rem; /* 20px / 16px = 1.25rem */
+    border-radius: 0.5625rem; /* 9px / 16px = 0.5625rem */
+    color: #fff;
+  }
+  
+  .commentbox i {
+    margin-top: 0.9375rem; /* 15px / 16px = 0.9375rem */
+    margin-left: 1.5625rem; /* 25px / 16px = 1.5625rem */
+  }
+  
+  .commentbox span {
+    margin-left: 1.25rem; /* 20px / 16px = 1.25rem */
+    top: 1.25rem; /* 20px / 16px = 1.25rem */
+    font-size: 1.25rem; /* 20px / 16px = 1.25rem */
+    color: #fff;
+  }
+  
+  .comment input {
+    margin-top: 0.625rem; /* 10px / 16px = 0.625rem */
+    height: 7.5rem; /* 120px / 16px = 7.5rem */
+    width: 25rem; /* 400px / 16px = 25rem */
+    margin-left: 2.5rem; /* 40px / 16px = 2.5rem */
+    border-radius: 
+  
+    /* Assuming a base font size of 16px */
+
+/* comment input */
+.comment input {
+    margin-top: 0.625rem; /* 10px / 16px = 0.625rem */
+    height: 7.5rem; /* 120px / 16px = 7.5rem */
+    width: 25rem; /* 400px / 16px = 25rem */
+    margin-left: 2.5rem; /* 40px / 16px = 2.5rem */
+    border-radius: 0.625rem; /* 10px / 16px = 0.625rem */
+    background: transparent;
+    color: white;
+  }
+  
+  /* comment p */
+  .comment p {
+    margin-top: 5rem; /* 80px / 16px = 5rem */
+    margin-left: -0.625rem; /* -10px / 16px = -0.625rem */
+    color: #fff;
+    text-align: center;
+  }
+  
+  /* postboxofreviews */
+  .postboxofreviews {
+    border: 0.125rem solid white; /* 2px / 16px = 0.125rem */
+    height: 1.25rem; /* 20px / 16px = 1.25rem */
+    width: 4.375rem; /* 70px / 16px = 4.375rem */
+    background: white;
+    margin-left: 21.875rem; /* 350px / 16px = 21.875rem */
+    margin-top: 0.625rem; /* 10px / 16px = 0.625rem */
+  }
+  
+  .postboxofreviews span {
+    margin-top: 0.3125rem; /* 5px / 16px = 0.3125rem */
+    margin-left: 1.0625rem; /* 17px / 16px = 1.0625rem */
+  }
+  
